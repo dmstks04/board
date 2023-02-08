@@ -1,0 +1,9 @@
+1. 스프링 500에러 (password: no )
+	SELECT user,plugin,host FROM mysql.user;
+	plugin -> caching_sha2_password 확인	
+ALTER USER 'dmstks'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
+로 패스워드 변경
+plugin -> mysql_native_password 확인
+
+2. 404, 요청된 리소스 [/controller/]은(는) 가용하지 않습니다.
+톰캣 path /content를 /로 변경
